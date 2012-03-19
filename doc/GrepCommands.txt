@@ -1,0 +1,101 @@
+*GrepCommands.txt*          Summary sentence.
+			^ Start here. v Center this.
+		       GREP COMMANDS    by Ingo Karkat
+								*GrepCommands.vim*
+description			|GrepCommands-description|
+usage				|GrepCommands-usage|
+installation			|GrepCommands-installation|
+configuration			|GrepCommands-configuration|
+integration			|GrepCommands-integration|
+limitations			|GrepCommands-limitations|
+known problems			|GrepCommands-known-problems|
+todo				|GrepCommands-todo|
+history				|GrepCommands-history|
+
+==============================================================================
+DESCRIPTION				       *GrepCommands-description*
+
+This plugin ...
+
+HOW IT WORKS								     *
+
+RELATED WORKS								     *
+
+==============================================================================
+USAGE						     *GrepCommands-usage*
+
+:ArgGrep[Add][!] [{pattern}]
+:ArgGrep[Add][!] /{pattern}/[g][j]
+			Search for {pattern} (or current search string if
+			omitted) in all files from the |argument-list| and set
+			the error list to the matches.
+:BufGrep[Add][!] [{pattern}]
+:BufGrep[Add][!] /{pattern}/[g][j]
+			Search for {pattern} (or current search string if
+			omitted) in all listed buffers and set the error list
+			to the matches.
+:WinGrep[Add][!] [{pattern}]
+:WinGrep[Add][!] /{pattern}/[g][j]
+			Search for {pattern} (or current search string if
+			omitted) in all buffers visible in the current tab
+			page and set the error list to the matches.
+:TabGrep[Add][!] [{pattern}]
+:TabGrep[Add][!] /{pattern}/[g][j]
+			Search for {pattern} (or current search string if
+			omitted) in all buffers visible in all tab pages and
+			set the error list to the matches.
+
+EXAMPLE						   *GrepCommands-example*
+
+==============================================================================
+INSTALLATION				      *GrepCommands-installation*
+
+This script is packaged as a |vimball|. If you have the "gunzip" decompressor
+in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress
+the archive first, e.g. using WinZip. Inside Vim, install by sourcing the
+vimball or via the |:UseVimball| command. >
+    vim GrepCommands.vba.gz
+    :so %
+To uninstall, use the |:RmVimball| command.
+
+DEPENDENCIES				      *GrepCommands-dependencies*
+
+- Requires Vim 7.0 or higher.
+
+==============================================================================
+CONFIGURATION				     *GrepCommands-configuration*
+
+For a permanent configuration, put the following commands into your |vimrc|:
+
+						*g:GrepCommands_MyOption*
+To change the default TODO from FOO to BAR, use: >
+    let g:GrepCommands_MyOption = 'BAR'
+<
+==============================================================================
+INTEGRATION				       *GrepCommands-integration*
+
+==============================================================================
+LIMITATIONS				       *GrepCommands-limitations*
+
+KNOWN PROBLEMS				    *GrepCommands-known-problems*
+
+TODO						      *GrepCommands-todo*
+
+IDEAS						     *GrepCommands-ideas*
+
+==============================================================================
+HISTORY						   *GrepCommands-history*
+
+GOAL
+First published version.
+
+0.01	19-Mar-2012
+Started development.
+
+==============================================================================
+Copyright: (C) 2012 Ingo Karkat
+The VIM LICENSE applies to this script; see |copyright|.
+
+Maintainer:	Ingo Karkat <ingo@karkat.de>
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
