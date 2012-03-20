@@ -1,19 +1,17 @@
-*GrepCommands.txt*          Summary sentence.
-			^ Start here. v Center this.
+*GrepCommands.txt*      Perform :vimgrep over arguments, buffers, windows.
+
 		       GREP COMMANDS    by Ingo Karkat
-								*GrepCommands.vim*
+							    *GrepCommands.vim*
 description			|GrepCommands-description|
 usage				|GrepCommands-usage|
 installation			|GrepCommands-installation|
-configuration			|GrepCommands-configuration|
-integration			|GrepCommands-integration|
 limitations			|GrepCommands-limitations|
 known problems			|GrepCommands-known-problems|
 todo				|GrepCommands-todo|
 history				|GrepCommands-history|
 
 ==============================================================================
-DESCRIPTION				       *GrepCommands-description*
+DESCRIPTION					    *GrepCommands-description*
 
 This plugin ...
 
@@ -22,7 +20,7 @@ HOW IT WORKS								     *
 RELATED WORKS								     *
 
 ==============================================================================
-USAGE						     *GrepCommands-usage*
+USAGE							  *GrepCommands-usage*
 
 :ArgGrep[Add][!] [{pattern}]
 :ArgGrep[Add][!] /{pattern}/[g][j]
@@ -45,10 +43,10 @@ USAGE						     *GrepCommands-usage*
 			omitted) in all buffers visible in all tab pages and
 			set the error list to the matches.
 
-EXAMPLE						   *GrepCommands-example*
+EXAMPLE							*GrepCommands-example*
 
 ==============================================================================
-INSTALLATION				      *GrepCommands-installation*
+INSTALLATION					   *GrepCommands-installation*
 
 This script is packaged as a |vimball|. If you have the "gunzip" decompressor
 in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress
@@ -58,33 +56,21 @@ vimball or via the |:UseVimball| command. >
     :so %
 To uninstall, use the |:RmVimball| command.
 
-DEPENDENCIES				      *GrepCommands-dependencies*
+DEPENDENCIES					   *GrepCommands-dependencies*
 
 - Requires Vim 7.0 or higher.
 
 ==============================================================================
-CONFIGURATION				     *GrepCommands-configuration*
+LIMITATIONS					    *GrepCommands-limitations*
 
-For a permanent configuration, put the following commands into your |vimrc|:
+KNOWN PROBLEMS					 *GrepCommands-known-problems*
 
-						*g:GrepCommands_MyOption*
-To change the default TODO from FOO to BAR, use: >
-    let g:GrepCommands_MyOption = 'BAR'
-<
-==============================================================================
-INTEGRATION				       *GrepCommands-integration*
+TODO							   *GrepCommands-todo*
+
+IDEAS							  *GrepCommands-ideas*
 
 ==============================================================================
-LIMITATIONS				       *GrepCommands-limitations*
-
-KNOWN PROBLEMS				    *GrepCommands-known-problems*
-
-TODO						      *GrepCommands-todo*
-
-IDEAS						     *GrepCommands-ideas*
-
-==============================================================================
-HISTORY						   *GrepCommands-history*
+HISTORY							*GrepCommands-history*
 
 GOAL
 First published version.
