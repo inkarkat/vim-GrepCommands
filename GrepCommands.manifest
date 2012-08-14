@@ -1,0 +1,3 @@
+autoload/GrepCommands.vim
+plugin/GrepCommands.vim
+doc/GrepCommands.txt
