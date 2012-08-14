@@ -1,4 +1,4 @@
-" GrepCommands.vim: summary
+" GrepCommands.vim: Perform :vimgrep over arguments, buffers, windows.
 "
 " DEPENDENCIES:
 "
