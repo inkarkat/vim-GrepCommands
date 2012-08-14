@@ -13,37 +13,44 @@ history				|GrepCommands-history|
 ==============================================================================
 DESCRIPTION					    *GrepCommands-description*
 
-This plugin ...
-
-HOW IT WORKS								     *
+This plugin defines variants of the built-in |:vimgrep| command which target
+all arguments, listed buffers, windows in the current tab page or all tab
+pages for its search. Additionally, the search defaults to the current search
+string, so often using these commands in much faster than building the
+equivalent search with :vimgrep.
 
 RELATED WORKS								     *
+
+- This is a modern re-implementation of the similar commands defined by
+  greputils.vim (vimscript #1062), which hasn't been updated since 2005.
 
 ==============================================================================
 USAGE							  *GrepCommands-usage*
 
+						      *:ArgGrep* *:ArgGrepAdd*
 :ArgGrep[Add][!] [{pattern}]
 :ArgGrep[Add][!] /{pattern}/[g][j]
 			Search for {pattern} (or current search string if
 			omitted) in all files from the |argument-list| and set
 			the error list to the matches.
+						      *:BufGrep* *:BufGrepAdd*
 :BufGrep[Add][!] [{pattern}]
 :BufGrep[Add][!] /{pattern}/[g][j]
 			Search for {pattern} (or current search string if
 			omitted) in all listed buffers and set the error list
 			to the matches.
+						      *:WinGrep* *:WinGrepAdd*
 :WinGrep[Add][!] [{pattern}]
 :WinGrep[Add][!] /{pattern}/[g][j]
 			Search for {pattern} (or current search string if
 			omitted) in all buffers visible in the current tab
 			page and set the error list to the matches.
+						      *:TabGrep* *:TabGrepAdd*
 :TabGrep[Add][!] [{pattern}]
 :TabGrep[Add][!] /{pattern}/[g][j]
 			Search for {pattern} (or current search string if
 			omitted) in all buffers visible in all tab pages and
 			set the error list to the matches.
-
-EXAMPLE							*GrepCommands-example*
 
 ==============================================================================
 INSTALLATION					   *GrepCommands-installation*
