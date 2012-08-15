@@ -1,7 +1,8 @@
-" GrepCommands.vim: summary
+" GrepCommands.vim: Perform :vimgrep over arguments, buffers, windows.
 "
 " DEPENDENCIES:
 "   - escapings.vim autoload script
+"   - ingocollections.vim autoload script
 "
 " Copyright: (C) 2012 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
@@ -9,7 +10,9 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
-"	001	19-Mar-2012	file creation
+"   1.00.001	19-Mar-2012	file creation
+let s:save_cpo = &cpo
+set cpo&vim
 
 function! GrepCommands#Arguments()
     return argv()
@@ -78,4 +81,6 @@ function! GrepCommands#Grep( count, grepCommand, filespecs, pattern, ... )
     return 1
 endfunction
 
+let &cpo = s:save_cpo
+unlet s:save_cpo
 " vim: set ts=8 sts=4 sw=4 noexpandtab ff=unix fdm=syntax :
