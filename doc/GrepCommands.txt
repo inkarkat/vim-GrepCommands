@@ -70,6 +70,10 @@ DEPENDENCIES					   *GrepCommands-dependencies*
 ==============================================================================
 LIMITATIONS					    *GrepCommands-limitations*
 
+- Unnamed buffers cannot be searched via |:vimgrep|. When the scope of the
+  search contains only unnamed buffers, "E683: File name missing or invalid
+  pattern" is issued.
+
 KNOWN PROBLEMS					 *GrepCommands-known-problems*
 
 TODO							   *GrepCommands-todo*
@@ -79,7 +83,7 @@ IDEAS							  *GrepCommands-ideas*
 ==============================================================================
 HISTORY							*GrepCommands-history*
 
-1.00	15-Aug-2012
+1.00	16-Aug-2012
 First published version.
 
 0.01	19-Mar-2012
