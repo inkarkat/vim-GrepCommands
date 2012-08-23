@@ -19,6 +19,11 @@ pages for its search. Additionally, the search defaults to the current search
 string, so using these commands is often much faster than building the
 equivalent search with :vimgrep.
 
+SEE ALSO								     *
+
+- The GrepHere plugin (vimscript #0000) provides a :GrepHere command that
+  covers only the current buffer.
+
 RELATED WORKS								     *
 
 - This is a modern re-implementation of the similar commands defined by
@@ -26,7 +31,6 @@ RELATED WORKS								     *
 
 ==============================================================================
 USAGE							  *GrepCommands-usage*
-
 						      *:ArgGrep* *:ArgGrepAdd*
 :ArgGrep[Add][!] [{pattern}]
 :ArgGrep[Add][!] /{pattern}/[g][j]
