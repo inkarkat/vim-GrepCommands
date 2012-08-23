@@ -10,7 +10,10 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
-"   1.00.001	19-Mar-2012	file creation
+"   1.00.002	16-Aug-2012	Use the original window order for :WinGrep[Add]
+"				(just like in :windo) instead of processing by
+"				buffer number. Same for :TabGrep[Add].
+"	001	19-Mar-2012	file creation
 let s:save_cpo = &cpo
 set cpo&vim
 
@@ -36,7 +39,7 @@ function! GrepCommands#Buffers()
     \)
 endfunction
 function! GrepCommands#Windows()
-    return s:BufNrsToFilespecs(sort(ingocollections#unique(tabpagebuflist())))
+    return s:BufNrsToFilespecs(ingocollections#uniqueStable(tabpagebuflist()))
 endfunction
 function! GrepCommands#TabWindows()
     let l:bufList = []
@@ -44,7 +47,7 @@ function! GrepCommands#TabWindows()
 	call extend(l:bufList, tabpagebuflist(l:i + 1))
     endfor
 
-    return s:BufNrsToFilespecs(sort(ingocollections#unique(l:bufList)))
+    return s:BufNrsToFilespecs(ingocollections#uniqueStable(l:bufList))
 endfunction
 
 function! GrepCommands#Grep( count, grepCommand, filespecs, pattern, ... )
