@@ -21,7 +21,7 @@ equivalent search with :vimgrep.
 
 SEE ALSO								     *
 
-- The GrepHere plugin (vimscript #0000) provides a :GrepHere command that
+- The GrepHere plugin (vimscript #4191) provides a :GrepHere command that
   covers only the current buffer.
 
 RELATED WORKS								     *
@@ -60,10 +60,10 @@ USAGE							  *GrepCommands-usage*
 INSTALLATION					   *GrepCommands-installation*
 
 This script is packaged as a |vimball|. If you have the "gunzip" decompressor
-in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress
+in your PATH, simply edit the *.vmb.gz package in Vim; otherwise, decompress
 the archive first, e.g. using WinZip. Inside Vim, install by sourcing the
 vimball or via the |:UseVimball| command. >
-    vim GrepCommands.vba.gz
+    vim GrepCommands.vmb.gz
     :so %
 To uninstall, use the |:RmVimball| command.
 
@@ -86,6 +86,11 @@ IDEAS							  *GrepCommands-ideas*
 
 ==============================================================================
 HISTORY							*GrepCommands-history*
+
+1.01	24-Aug-2012
+BUG: Forgot to append l:patternFlags and enclose in delimiters when there's a
+non-whitespace pattern; this makes the GrepHere plugin's mappings wrongly jump
+to the first match.
 
 1.00	16-Aug-2012
 First published version.
