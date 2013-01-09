@@ -28,6 +28,8 @@ RELATED WORKS								     *
 
 - This is a modern re-implementation of the similar commands defined by
   greputils.vim (vimscript #1062), which hasn't been updated since 2005.
+- brep (vimscript #3653) can grep buffers (also unlisted with [!]) and show
+  them in the quickfix list.
 
 ==============================================================================
 USAGE							  *GrepCommands-usage*
