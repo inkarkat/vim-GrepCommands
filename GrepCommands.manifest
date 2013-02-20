@@ -1,3 +1,5 @@
+autoload/escapings.vim
+autoload/ingocollections.vim
 autoload/GrepCommands.vim
 plugin/GrepCommands.vim
 doc/GrepCommands.txt
