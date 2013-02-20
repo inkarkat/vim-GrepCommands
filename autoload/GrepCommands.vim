@@ -10,6 +10,10 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.01.003	24-Aug-2012	BUG: Forgot to append l:patternFlags and enclose
+"				in delimiters when there's a non-whitespace
+"				pattern; this makes the GrepHere plugin's
+"				mappings wrongly jump to the first match.
 "   1.00.002	16-Aug-2012	Use the original window order for :WinGrep[Add]
 "				(just like in :windo) instead of processing by
 "				buffer number. Same for :TabGrep[Add].
@@ -56,7 +60,7 @@ function! GrepCommands#Grep( count, grepCommand, filespecs, pattern, ... )
 	let l:patternDelimiter = (v:searchforward ? '/' : '?')
 	let l:patternArgument = l:patternDelimiter . @/ . l:patternDelimiter . l:patternFlags
     else
-	if a:pattern =~# '^\i.*\s'
+	if a:pattern =~# '^\i.*\s' || ! empty(l:patternFlags)
 	    " A pattern starting with an ID character must not contain
 	    " whitespace; otherwise, everything after the first word would be
 	    " parsed as additional file arguments to :vimgrep.
