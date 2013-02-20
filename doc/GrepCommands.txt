@@ -15,8 +15,8 @@ DESCRIPTION					    *GrepCommands-description*
 
 This plugin defines variants of the built-in |:vimgrep| command which target
 all arguments, listed buffers, windows in the current tab page or all tab
-pages for its search. Additionally, the search defaults to the current search
-string, so using these commands is often much faster than building the
+pages for its search. Additionally, the search defaults to the last search
+pattern, so using these commands is often much faster than building the
 equivalent search with :vimgrep.
 
 SEE ALSO								     *
@@ -36,25 +36,25 @@ USAGE							  *GrepCommands-usage*
 						      *:ArgGrep* *:ArgGrepAdd*
 :ArgGrep[Add][!] [{pattern}]
 :ArgGrep[Add][!] /{pattern}/[g][j]
-			Search for {pattern} (or current search string if
+			Search for {pattern} (or last search pattern if
 			omitted) in all files from the |argument-list| and set
 			the error list to the matches.
 						      *:BufGrep* *:BufGrepAdd*
 :BufGrep[Add][!] [{pattern}]
 :BufGrep[Add][!] /{pattern}/[g][j]
-			Search for {pattern} (or current search string if
+			Search for {pattern} (or last search pattern if
 			omitted) in all listed buffers and set the error list
 			to the matches.
 						      *:WinGrep* *:WinGrepAdd*
 :WinGrep[Add][!] [{pattern}]
 :WinGrep[Add][!] /{pattern}/[g][j]
-			Search for {pattern} (or current search string if
+			Search for {pattern} (or last search pattern if
 			omitted) in all buffers visible in the current tab
 			page and set the error list to the matches.
 						      *:TabGrep* *:TabGrepAdd*
 :TabGrep[Add][!] [{pattern}]
 :TabGrep[Add][!] /{pattern}/[g][j]
-			Search for {pattern} (or current search string if
+			Search for {pattern} (or last search pattern if
 			omitted) in all buffers visible in all tab pages and
 			set the error list to the matches.
 
