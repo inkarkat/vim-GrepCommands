@@ -39,6 +39,7 @@ USAGE							  *GrepCommands-usage*
 			Search for {pattern} (or last search pattern if
 			omitted) in all files from the |argument-list| and set
 			the error list to the matches.
+			Same as |:vimgrep| {pattern} |##|.
 						      *:BufGrep* *:BufGrepAdd*
 :BufGrep[Add][!] [{pattern}]
 :BufGrep[Add][!] /{pattern}/[g][j]
