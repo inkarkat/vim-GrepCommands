@@ -2,7 +2,7 @@
 "
 " DEPENDENCIES:
 "   - escapings.vim autoload script
-"   - ingocollections.vim autoload script
+"   - ingo/collections.vim autoload script
 "
 " Copyright: (C) 2012 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
@@ -10,6 +10,7 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.02.004	21-Feb-2013	Move to ingo-library.
 "   1.01.003	24-Aug-2012	BUG: Forgot to append l:patternFlags and enclose
 "				in delimiters when there's a non-whitespace
 "				pattern; this makes the GrepHere plugin's
@@ -43,7 +44,7 @@ function! GrepCommands#Buffers()
     \)
 endfunction
 function! GrepCommands#Windows()
-    return s:BufNrsToFilespecs(ingocollections#uniqueStable(tabpagebuflist()))
+    return s:BufNrsToFilespecs(ingo#collections#UniqueStable(tabpagebuflist()))
 endfunction
 function! GrepCommands#TabWindows()
     let l:bufList = []
@@ -51,7 +52,7 @@ function! GrepCommands#TabWindows()
 	call extend(l:bufList, tabpagebuflist(l:i + 1))
     endfor
 
-    return s:BufNrsToFilespecs(ingocollections#uniqueStable(l:bufList))
+    return s:BufNrsToFilespecs(ingo#collections#UniqueStable(l:bufList))
 endfunction
 
 function! GrepCommands#Grep( count, grepCommand, filespecs, pattern, ... )
