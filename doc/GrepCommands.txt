@@ -30,6 +30,9 @@ RELATED WORKS								     *
   greputils.vim (vimscript #1062), which hasn't been updated since 2005.
 - brep (vimscript #3653) can grep buffers (also unlisted with [!]) and show
   them in the quickfix list.
+- greplace (vimscript #1813) can search buffers and arguments; it shows the
+  matches in a special replace buffer that can be edited and incorporated into
+  the original files.
 
 ==============================================================================
 USAGE							  *GrepCommands-usage*
