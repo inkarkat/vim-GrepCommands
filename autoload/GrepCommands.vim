@@ -3,13 +3,15 @@
 " DEPENDENCIES:
 "   - escapings.vim autoload script
 "   - ingo/collections.vim autoload script
+"   - ingo/msg.vim autoload script
 "
-" Copyright: (C) 2012 Ingo Karkat
+" Copyright: (C) 2012-2013 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
 "
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.02.005	14-Jun-2013	Use ingo/msg.vim.
 "   1.02.004	21-Feb-2013	Move to ingo-library.
 "   1.01.003	24-Aug-2012	BUG: Forgot to append l:patternFlags and enclose
 "				in delimiters when there's a non-whitespace
@@ -76,13 +78,7 @@ function! GrepCommands#Grep( count, grepCommand, filespecs, pattern, ... )
     try
 	execute (a:count ? a:count : '') . a:grepCommand l:patternArgument join(map(a:filespecs, 'escapings#fnameescape(v:val)'))
     catch /^Vim\%((\a\+)\)\=:E/
-	" v:exception contains what is normally in v:errmsg, but with extra
-	" exception source info prepended, which we cut away.
-	let v:errmsg = substitute(v:exception, '^Vim\%((\a\+)\)\=:', '', '')
-	echohl ErrorMsg
-	echomsg v:errmsg
-	echohl None
-
+	call ingo#msg#VimExceptionMsg()
 	return 0
     endtry
 
