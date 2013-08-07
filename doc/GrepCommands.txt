@@ -95,6 +95,9 @@ IDEAS							  *GrepCommands-ideas*
 ==============================================================================
 HISTORY							*GrepCommands-history*
 
+1.02	RELEASEME
+- Add dependency to ingo-library (vimscript #4433).
+
 1.01	24-Aug-2012
 BUG: Forgot to append l:patternFlags and enclose in delimiters when there's a
 non-whitespace pattern; this makes the GrepHere plugin's mappings wrongly jump
@@ -107,7 +110,7 @@ First published version.
 Started development.
 
 ==============================================================================
-Copyright: (C) 2012 Ingo Karkat
+Copyright: (C) 2012-2013 Ingo Karkat
 The VIM LICENSE applies to this plugin; see |copyright|.
 
 Maintainer:	Ingo Karkat <ingo@karkat.de>
