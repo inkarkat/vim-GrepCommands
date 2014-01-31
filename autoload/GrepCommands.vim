@@ -1,8 +1,8 @@
 " GrepCommands.vim: Perform :vimgrep over arguments, buffers, windows.
 "
 " DEPENDENCIES:
-"   - escapings.vim autoload script
 "   - ingo/collections.vim autoload script
+"   - ingo/compat.vim autoload script
 "   - ingo/msg.vim autoload script
 "
 " Copyright: (C) 2012-2013 Ingo Karkat
@@ -11,6 +11,7 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.02.006	08-Aug-2013	Move escapings.vim into ingo-library.
 "   1.02.005	14-Jun-2013	Use ingo/msg.vim.
 "   1.02.004	21-Feb-2013	Move to ingo-library.
 "   1.01.003	24-Aug-2012	BUG: Forgot to append l:patternFlags and enclose
@@ -76,7 +77,7 @@ function! GrepCommands#Grep( count, grepCommand, filespecs, pattern, ... )
     endif
 
     try
-	execute (a:count ? a:count : '') . a:grepCommand l:patternArgument join(map(a:filespecs, 'escapings#fnameescape(v:val)'))
+	execute (a:count ? a:count : '') . a:grepCommand l:patternArgument join(map(a:filespecs, 'ingo#compat#fnameescape(v:val)'))
     catch /^Vim\%((\a\+)\)\=:E/
 	call ingo#msg#VimExceptionMsg()
 	return 0
