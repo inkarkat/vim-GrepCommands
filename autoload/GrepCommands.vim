@@ -90,7 +90,7 @@ function! GrepCommands#Grep( count, grepCommand, filespecs, pattern, ... )
 
     try
 	execute (a:count ? a:count : '') . a:grepCommand l:patternArgument join(map(a:filespecs, 'ingo#compat#fnameescape(v:val)'))
-    catch /^Vim\%((\a\+)\)\=:E/
+    catch /^Vim\%((\a\+)\)\=:/
 	call ingo#msg#VimExceptionMsg()
 	return 0
     endtry
