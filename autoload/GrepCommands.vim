@@ -12,6 +12,9 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.02.008	30-Oct-2014	FIX: v:searchforward requires Vim 7.2;
+"				explicitly check for its existence and else just
+"				assume forward search.
 "   1.02.007	01-Feb-2014	Add second optional a:patternPrefix argument to
 "				GrepCommands#Grep(), to enable :GrepHere within
 "				a [range].
@@ -66,7 +69,7 @@ function! GrepCommands#Grep( count, grepCommand, filespecs, pattern, ... )
     let l:patternFlags = (a:0 ? a:1 : '')
     let l:patternPrefix = (a:0 > 1 ? a:2 : '')
     if empty(a:pattern)
-	let l:patternDelimiter = (v:searchforward ? '/' : '?')
+	let l:patternDelimiter = (! exists('v:searchforward') || v:searchforward ? '/' : '?')
 	let l:patternArgument = l:patternDelimiter . l:patternPrefix . @/ . l:patternDelimiter . l:patternFlags
     else
 	if a:pattern =~# '^\i.*\s' || ! empty(l:patternFlags)
