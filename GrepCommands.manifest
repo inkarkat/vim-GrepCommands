@@ -1,4 +1,3 @@
-autoload/escapings.vim
 autoload/GrepCommands.vim
 plugin/GrepCommands.vim
 doc/GrepCommands.txt
