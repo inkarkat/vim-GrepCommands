@@ -95,11 +95,13 @@ IDEAS							  *GrepCommands-ideas*
 ==============================================================================
 HISTORY							*GrepCommands-history*
 
-1.02	RELEASEME
+1.02	29-Nov-2016
 - Internal API changes to enable :GrepHere within a [range].
 - FIX: v:searchforward requires Vim 7.2; explicitly check for its existence
   and else just assume forward search.
 - Add dependency to ingo-library (vimscript #4433).
+  *** You need to separately install ingo-library (vimscript #4433) version
+  1.012 (or higher)! ***
 
 1.01	24-Aug-2012
 BUG: Forgot to append l:patternFlags and enclose in delimiters when there's a
@@ -113,7 +115,7 @@ First published version.
 Started development.
 
 ==============================================================================
-Copyright: (C) 2012-2014 Ingo Karkat
+Copyright: (C) 2012-2016 Ingo Karkat
 The VIM LICENSE applies to this plugin; see |copyright|.
 
 Maintainer:	Ingo Karkat <ingo@karkat.de>
