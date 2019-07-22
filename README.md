@@ -25,6 +25,8 @@ equivalent search with :vimgrep.
 - greplace ([vimscript #1813](http://www.vim.org/scripts/script.php?script_id=1813)) can search buffers and arguments; it shows the
   matches in a special replace buffer that can be edited and incorporated into
   the original files.
+- vim-lister (https://github.com/tommcdo/vim-lister) also has (among others)
+  an :Agrep command.
 
 USAGE
 ------------------------------------------------------------------------------
@@ -115,7 +117,7 @@ to the first match.
 - Started development.
 
 ------------------------------------------------------------------------------
-Copyright: (C) 2012-2018 Ingo Karkat -
+Copyright: (C) 2012-2019 Ingo Karkat -
 The [VIM LICENSE](http://vimdoc.sourceforge.net/htmldoc/uganda.html#license) applies to this plugin.
 
-Maintainer:     Ingo Karkat <ingo@karkat.de>
+Maintainer:     Ingo Karkat &lt;ingo@karkat.de&gt;

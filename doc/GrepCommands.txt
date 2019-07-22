@@ -33,6 +33,8 @@ RELATED WORKS								     *
 - greplace (vimscript #1813) can search buffers and arguments; it shows the
   matches in a special replace buffer that can be edited and incorporated into
   the original files.
+- vim-lister (https://github.com/tommcdo/vim-lister) also has (among others)
+  an :Agrep command.
 
 ==============================================================================
 USAGE							  *GrepCommands-usage*
@@ -126,7 +128,7 @@ First published version.
 Started development.
 
 ==============================================================================
-Copyright: (C) 2012-2018 Ingo Karkat
+Copyright: (C) 2012-2019 Ingo Karkat
 The VIM LICENSE applies to this plugin; see |copyright|.
 
 Maintainer:	Ingo Karkat <ingo@karkat.de>
